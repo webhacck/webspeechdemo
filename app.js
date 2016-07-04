@@ -14,8 +14,9 @@ btn.addEventListener('click', function() {
 
 //認識されたテキストを使って処理を分岐
 speech.addEventListener('result', function(e) {
-  console.log(e);
   var text = e.results[0][0].transcript;
+
+  content.innerHTML = "";
   
   switch(text) {
     case "検索":
